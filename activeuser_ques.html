@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% block body_block %}
+<h1>Enter Your Question</h1>
+   
+  <form method='POST' action="{% url 'polls:activeuser_ques' %}" >
+      
+  {% csrf_token %}
+ 
+  <table>
+    {{ form }}
+       
+  </table>
+  <input type ="submit" name ="submit" value = "Create Question" />
+       
+{% endblock %}
+
+  
